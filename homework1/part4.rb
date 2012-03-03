@@ -24,6 +24,11 @@ class JellyBean < Dessert
   end
   
   def delicious?
-    @flavor != 'black licorice' and !self.instance_of?(JellyBean)
+    not(@flavor == 'black licorice')
   end
 end
+
+
+j = JellyBean.new('a','200','black')
+
+p j.delicious?()
