@@ -35,11 +35,12 @@ p "otto".palindrome?()
 # b)
 module Enumerable
   def palindrome?
-    self == self.reverse
+    self.to_a == self.to_a.reverse 
   end
 end
 
 #test
+
 p [1,2,3,2,1].palindrome?
 p [1,2,3,2,1,2].palindrome?
 p ['a'].palindrome?
